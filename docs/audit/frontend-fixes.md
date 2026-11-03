@@ -1,0 +1,23 @@
+# Frontend changes - 2026-10-26
+
+Backend acceptance before frontend edits: 333 tests across 59 suites passed, zero failures/errors/skips (`proxyx-audit-20261026-backend-final.log`). The earlier generic/core gate also passed lint with 13 warnings and zero errors; the additional source/DNS/cancellation regressions were included in the 333 count. One test-fixture compile error involving hidden Android mutators was corrected using Robolectric helpers, without weakening assertions.
+
+## Changes
+
+- Added independent HTTP/SOCKS Vault destination and GenericProxyController. Its paged DAO query, protocol filter and results never use Telegram ranking. Background/foreground exit and tab disposal cancel the operation. A shared network-operation reservation prevents concurrent Telegram benchmarks. Arbitrary positive test counts are bounded only by available filtered records, with sequential checking to avoid contention.
+- Rows use actual request outcomes, timestamps and captured-network identity. Country remains provider-reported. Source download success is labeled as a list fetch, not a successful proxy check. Disabled providers have explicit reasons. Authentication-required results never appear as working.
+- Existing Clear Database action also clears the independent generic database. No real user data was cleared during development.
+- Dashboard previously reset scrolling for every later Paging refresh once any benchmark revision existed. It now consumes each benchmark revision once. A new Pager generation prevents the previous anchor from restoring a distant row after a benchmark.
+- Dashboard compact/keyboard handling now uses its actual BoxWithConstraints height. This avoids Configuration.screenHeightDp mismatches in resized/edge-to-edge windows and removes the related lint suppression.
+- Device inspection in Persian exposed bidirectional reordering of the generic progress fraction. Its text paragraph now explicitly uses LTR direction so completed/total remains in that order. This is a display-only change, not a counter change.
+- Concurrent feed callbacks can reach the controller out of order even with an atomic producer counter. Generic source progress now advances monotonically and stays within its declared total; two focused regression tests cover delayed callbacks and bounds.
+- A later device network-change check found that compact Home hid the existing network warning while leaving the historical verification badge/latency visible. Home badges and rows now use the active fingerprint: historical evidence is neutral and explicitly labeled OTHER NETWORK, active metrics are hidden, and real-transfer eligibility requires current-network protocol evidence. History remains stored. Four DashboardEvidenceTest cases cover different, unknown, same and untested network evidence.
+- The privacy dialog is scrollable and both the app copy and English privacy policy disclose the generic HTTPS connectivity-test destination and separate local storage.
+
+## Verification boundary
+
+The isolated API 34 emulator exercised startup, progressive MTProto collection, a complete three-stage benchmark (5 first-stage routes, 1 second-stage route, 1 third-stage success), pause/resume, ranked Home return, favorites, comparison, English/Persian, dark theme, 1.3 font scale, disabled auto-refresh, invalid WEB import, WEB fallback/trust cancellation, generic collection/cache/filter/search/cancel and network loss. Screenshots and case records are under artifacts/v7-device with the audit-20261026 prefix. The 338-test rebuilt APK was installed and `audit-20261026-final-rtl-progress.png` was visually inspected: Persian, dark theme and font 1.3 show the correct 0/2 fraction, with cancellation working. Persisted generic rows from the earlier network display the other-network label. Both monotonic-progress tests passed.
+
+The last 342-test APK was then installed and the seven native tests repeated successfully. A real MTProto manual retest produced 144ms, TCP 10/10 and MTProto 8/8. Disabling the audit emulator's WiFi/data changed both the compact Home badge and row to OTHER NETWORK, hiding historical active latency; `audit-20261026-home-network-final.png` was visually inspected. Both interfaces were restored and the AVD was stopped. No synthetic measurement was inserted into its app database for this check.
+
+No claim of every button, every device size or complete freedom from bugs is made. Account-dependent TDLib transfer cannot be exercised in the credential-free audit build; the user's existing Telegram session is deliberately not accessed. The emulator initially encountered a System UI ANR under host memory pressure; its frame rate is not a phone-performance measurement.

@@ -1,0 +1,4 @@
+# Copy this template to local.properties and use your own SDK path/configuration.
+sdk.dir=C\:\\Android\\Sdk
+telegram.apiId=0
+telegram.apiHash=

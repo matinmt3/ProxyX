@@ -1,0 +1,10 @@
+Proxy country database
+
+Dataset: server-country-ipv4-num.csv
+Source: https://github.com/sapics/ip-location-db
+Snapshot: 2026-07-26
+License: Open Data Commons Public Domain Dedication and License 1.0 (PDDL-1.0)
+License URL: https://opendatacommons.org/licenses/pddl/1-0/
+
+The server-country dataset is compiled from public routing and geofeed data and is
+used only for country-level lookup of proxy server addresses.

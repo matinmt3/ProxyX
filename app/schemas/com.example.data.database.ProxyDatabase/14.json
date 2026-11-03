@@ -1,0 +1,1279 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 14,
+    "identityHash": "adeec8bba32f0c37cad6c4a5d4f75ff5",
+    "entities": [
+      {
+        "tableName": "mtproto_proxies",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `server` TEXT NOT NULL, `port` INTEGER NOT NULL, `secret` TEXT NOT NULL, `country` TEXT NOT NULL, `countryCode` TEXT NOT NULL, `isWorking` INTEGER NOT NULL, `latency` INTEGER NOT NULL, `successRate` REAL NOT NULL, `stability` REAL NOT NULL, `score` INTEGER NOT NULL, `isFavorite` INTEGER NOT NULL, `recentlyUsed` INTEGER NOT NULL, `lastChecked` INTEGER NOT NULL, `verificationStatus` TEXT NOT NULL, `verificationConfidence` INTEGER NOT NULL, `protocolLatency` INTEGER NOT NULL, `protocolSuccessRate` REAL NOT NULL, `tcpAttempts` INTEGER NOT NULL, `tcpSuccesses` INTEGER NOT NULL, `protocolAttempts` INTEGER NOT NULL, `protocolConfirmations` INTEGER NOT NULL, `tcpP90Latency` INTEGER NOT NULL, `tcpJitter` INTEGER NOT NULL, `protocolP90Latency` INTEGER NOT NULL, `protocolJitter` INTEGER NOT NULL, `transferScore` INTEGER NOT NULL, `benchmarkStage` INTEGER NOT NULL, `benchmarkRounds` INTEGER NOT NULL, `continuityRate` REAL NOT NULL, `networkFingerprint` TEXT NOT NULL, `testedNetworkType` TEXT NOT NULL, `telegramDownloadKbps` INTEGER NOT NULL, `telegramUploadKbps` INTEGER NOT NULL, `telegramTransferBytes` INTEGER NOT NULL, `telegramTransferMeasuredAt` INTEGER NOT NULL, `benchmarkFailureReason` TEXT NOT NULL, `telegramTransferRounds` INTEGER NOT NULL, `telegramTransferConfidence` INTEGER NOT NULL, `telegramNetworkUploadBytes` INTEGER NOT NULL, `telegramNetworkDownloadBytes` INTEGER NOT NULL, PRIMARY KEY(`url`))",
+        "fields": [
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "server",
+            "columnName": "server",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "port",
+            "columnName": "port",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secret",
+            "columnName": "secret",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "countryCode",
+            "columnName": "countryCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isWorking",
+            "columnName": "isWorking",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latency",
+            "columnName": "latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successRate",
+            "columnName": "successRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stability",
+            "columnName": "stability",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "isFavorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recentlyUsed",
+            "columnName": "recentlyUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastChecked",
+            "columnName": "lastChecked",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationStatus",
+            "columnName": "verificationStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationConfidence",
+            "columnName": "verificationConfidence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolLatency",
+            "columnName": "protocolLatency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolSuccessRate",
+            "columnName": "protocolSuccessRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpAttempts",
+            "columnName": "tcpAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpSuccesses",
+            "columnName": "tcpSuccesses",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolAttempts",
+            "columnName": "protocolAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolConfirmations",
+            "columnName": "protocolConfirmations",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpP90Latency",
+            "columnName": "tcpP90Latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpJitter",
+            "columnName": "tcpJitter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolP90Latency",
+            "columnName": "protocolP90Latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolJitter",
+            "columnName": "protocolJitter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transferScore",
+            "columnName": "transferScore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "benchmarkStage",
+            "columnName": "benchmarkStage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "benchmarkRounds",
+            "columnName": "benchmarkRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "continuityRate",
+            "columnName": "continuityRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkFingerprint",
+            "columnName": "networkFingerprint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "testedNetworkType",
+            "columnName": "testedNetworkType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramDownloadKbps",
+            "columnName": "telegramDownloadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramUploadKbps",
+            "columnName": "telegramUploadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferBytes",
+            "columnName": "telegramTransferBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferMeasuredAt",
+            "columnName": "telegramTransferMeasuredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "benchmarkFailureReason",
+            "columnName": "benchmarkFailureReason",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferRounds",
+            "columnName": "telegramTransferRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferConfidence",
+            "columnName": "telegramTransferConfidence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramNetworkUploadBytes",
+            "columnName": "telegramNetworkUploadBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramNetworkDownloadBytes",
+            "columnName": "telegramNetworkDownloadBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "url"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_mtproto_proxies_lastChecked",
+            "unique": false,
+            "columnNames": [
+              "lastChecked"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_mtproto_proxies_lastChecked` ON `${TABLE_NAME}` (`lastChecked`)"
+          },
+          {
+            "name": "index_mtproto_proxies_isWorking_latency",
+            "unique": false,
+            "columnNames": [
+              "isWorking",
+              "latency"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_mtproto_proxies_isWorking_latency` ON `${TABLE_NAME}` (`isWorking`, `latency`)"
+          },
+          {
+            "name": "index_mtproto_proxies_verificationStatus_benchmarkStage_benchmarkRounds_transferScore",
+            "unique": false,
+            "columnNames": [
+              "verificationStatus",
+              "benchmarkStage",
+              "benchmarkRounds",
+              "transferScore"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_mtproto_proxies_verificationStatus_benchmarkStage_benchmarkRounds_transferScore` ON `${TABLE_NAME}` (`verificationStatus`, `benchmarkStage`, `benchmarkRounds`, `transferScore`)"
+          },
+          {
+            "name": "index_mtproto_proxies_countryCode_transferScore",
+            "unique": false,
+            "columnNames": [
+              "countryCode",
+              "transferScore"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_mtproto_proxies_countryCode_transferScore` ON `${TABLE_NAME}` (`countryCode`, `transferScore`)"
+          }
+        ]
+      },
+      {
+        "tableName": "proxy_source_health",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`sourceUrl` TEXT NOT NULL, `sourceName` TEXT NOT NULL, `lastAttemptAt` INTEGER NOT NULL, `lastSuccessAt` INTEGER NOT NULL, `totalFetches` INTEGER NOT NULL, `successfulFetches` INTEGER NOT NULL, `consecutiveFailures` INTEGER NOT NULL, `rawProxyCount` INTEGER NOT NULL, `uniqueProxyCount` INTEGER NOT NULL, `verifiedProxyCount` INTEGER NOT NULL, `duplicateRate` REAL NOT NULL, `verifiedRate` REAL NOT NULL, `averageDurationMs` INTEGER NOT NULL, `quarantineUntil` INTEGER NOT NULL, `lastError` TEXT NOT NULL, `contentSignature` TEXT NOT NULL, `mirrorGroupSize` INTEGER NOT NULL, `endpointDiversity` INTEGER NOT NULL, PRIMARY KEY(`sourceUrl`))",
+        "fields": [
+          {
+            "fieldPath": "sourceUrl",
+            "columnName": "sourceUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceName",
+            "columnName": "sourceName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastAttemptAt",
+            "columnName": "lastAttemptAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastSuccessAt",
+            "columnName": "lastSuccessAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalFetches",
+            "columnName": "totalFetches",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successfulFetches",
+            "columnName": "successfulFetches",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "consecutiveFailures",
+            "columnName": "consecutiveFailures",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rawProxyCount",
+            "columnName": "rawProxyCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uniqueProxyCount",
+            "columnName": "uniqueProxyCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verifiedProxyCount",
+            "columnName": "verifiedProxyCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duplicateRate",
+            "columnName": "duplicateRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verifiedRate",
+            "columnName": "verifiedRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averageDurationMs",
+            "columnName": "averageDurationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quarantineUntil",
+            "columnName": "quarantineUntil",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastError",
+            "columnName": "lastError",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentSignature",
+            "columnName": "contentSignature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mirrorGroupSize",
+            "columnName": "mirrorGroupSize",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endpointDiversity",
+            "columnName": "endpointDiversity",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "sourceUrl"
+          ]
+        }
+      },
+      {
+        "tableName": "proxy_source_membership",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`sourceUrl` TEXT NOT NULL, `proxyUrl` TEXT NOT NULL, PRIMARY KEY(`sourceUrl`, `proxyUrl`))",
+        "fields": [
+          {
+            "fieldPath": "sourceUrl",
+            "columnName": "sourceUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "proxyUrl",
+            "columnName": "proxyUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "sourceUrl",
+            "proxyUrl"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_proxy_source_membership_proxyUrl",
+            "unique": false,
+            "columnNames": [
+              "proxyUrl"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_proxy_source_membership_proxyUrl` ON `${TABLE_NAME}` (`proxyUrl`)"
+          }
+        ]
+      },
+      {
+        "tableName": "favorite_proxies",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `server` TEXT NOT NULL, `port` INTEGER NOT NULL, `secret` TEXT NOT NULL, `country` TEXT NOT NULL, `countryCode` TEXT NOT NULL, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `savedMessageId` INTEGER NOT NULL, `syncState` TEXT NOT NULL, `lastSyncError` TEXT NOT NULL, `folder` TEXT NOT NULL, `tags` TEXT NOT NULL, `note` TEXT NOT NULL, `lastKnownGoodAt` INTEGER NOT NULL, `lastKnownTransferScore` INTEGER NOT NULL, `lastKnownLatency` INTEGER NOT NULL, `lastKnownDownloadKbps` INTEGER NOT NULL, `lastKnownUploadKbps` INTEGER NOT NULL, PRIMARY KEY(`url`))",
+        "fields": [
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "server",
+            "columnName": "server",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "port",
+            "columnName": "port",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secret",
+            "columnName": "secret",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "countryCode",
+            "columnName": "countryCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "savedMessageId",
+            "columnName": "savedMessageId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncState",
+            "columnName": "syncState",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastSyncError",
+            "columnName": "lastSyncError",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "folder",
+            "columnName": "folder",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tags",
+            "columnName": "tags",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastKnownGoodAt",
+            "columnName": "lastKnownGoodAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastKnownTransferScore",
+            "columnName": "lastKnownTransferScore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastKnownLatency",
+            "columnName": "lastKnownLatency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastKnownDownloadKbps",
+            "columnName": "lastKnownDownloadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastKnownUploadKbps",
+            "columnName": "lastKnownUploadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "url"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_favorite_proxies_isActive",
+            "unique": false,
+            "columnNames": [
+              "isActive"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_favorite_proxies_isActive` ON `${TABLE_NAME}` (`isActive`)"
+          },
+          {
+            "name": "index_favorite_proxies_updatedAt",
+            "unique": false,
+            "columnNames": [
+              "updatedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_favorite_proxies_updatedAt` ON `${TABLE_NAME}` (`updatedAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "proxy_test_history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `proxyUrl` TEXT NOT NULL, `measuredAt` INTEGER NOT NULL, `benchmarkStage` INTEGER NOT NULL, `networkFingerprint` TEXT NOT NULL, `networkType` TEXT NOT NULL, `verificationStatus` TEXT NOT NULL, `failureReason` TEXT NOT NULL, `latency` INTEGER NOT NULL, `tcpP90Latency` INTEGER NOT NULL, `tcpJitter` INTEGER NOT NULL, `protocolLatency` INTEGER NOT NULL, `protocolP90Latency` INTEGER NOT NULL, `protocolJitter` INTEGER NOT NULL, `successRate` REAL NOT NULL, `protocolSuccessRate` REAL NOT NULL, `stability` REAL NOT NULL, `continuityRate` REAL NOT NULL, `verificationConfidence` INTEGER NOT NULL, `transferScore` INTEGER NOT NULL, `telegramDownloadKbps` INTEGER NOT NULL, `telegramUploadKbps` INTEGER NOT NULL, `telegramTransferRounds` INTEGER NOT NULL, `telegramTransferConfidence` INTEGER NOT NULL, `telegramNetworkUploadBytes` INTEGER NOT NULL, `telegramNetworkDownloadBytes` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "proxyUrl",
+            "columnName": "proxyUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measuredAt",
+            "columnName": "measuredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "benchmarkStage",
+            "columnName": "benchmarkStage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkFingerprint",
+            "columnName": "networkFingerprint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkType",
+            "columnName": "networkType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationStatus",
+            "columnName": "verificationStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failureReason",
+            "columnName": "failureReason",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latency",
+            "columnName": "latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpP90Latency",
+            "columnName": "tcpP90Latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tcpJitter",
+            "columnName": "tcpJitter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolLatency",
+            "columnName": "protocolLatency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolP90Latency",
+            "columnName": "protocolP90Latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolJitter",
+            "columnName": "protocolJitter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successRate",
+            "columnName": "successRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protocolSuccessRate",
+            "columnName": "protocolSuccessRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stability",
+            "columnName": "stability",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "continuityRate",
+            "columnName": "continuityRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationConfidence",
+            "columnName": "verificationConfidence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transferScore",
+            "columnName": "transferScore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramDownloadKbps",
+            "columnName": "telegramDownloadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramUploadKbps",
+            "columnName": "telegramUploadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferRounds",
+            "columnName": "telegramTransferRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTransferConfidence",
+            "columnName": "telegramTransferConfidence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramNetworkUploadBytes",
+            "columnName": "telegramNetworkUploadBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramNetworkDownloadBytes",
+            "columnName": "telegramNetworkDownloadBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_proxy_test_history_proxyUrl_measuredAt",
+            "unique": false,
+            "columnNames": [
+              "proxyUrl",
+              "measuredAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_proxy_test_history_proxyUrl_measuredAt` ON `${TABLE_NAME}` (`proxyUrl`, `measuredAt`)"
+          },
+          {
+            "name": "index_proxy_test_history_networkFingerprint_measuredAt",
+            "unique": false,
+            "columnNames": [
+              "networkFingerprint",
+              "measuredAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_proxy_test_history_networkFingerprint_measuredAt` ON `${TABLE_NAME}` (`networkFingerprint`, `measuredAt`)"
+          },
+          {
+            "name": "index_proxy_test_history_measuredAt",
+            "unique": false,
+            "columnNames": [
+              "measuredAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_proxy_test_history_measuredAt` ON `${TABLE_NAME}` (`measuredAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "benchmark_run_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `status` TEXT NOT NULL, `requestedCount` INTEGER NOT NULL, `selectedWorkers` INTEGER NOT NULL, `stage` INTEGER NOT NULL, `stageCompleted` INTEGER NOT NULL, `stageTotal` INTEGER NOT NULL, `completedWork` INTEGER NOT NULL, `totalWork` INTEGER NOT NULL, `telegramTotal` INTEGER NOT NULL, `telegramCompleted` INTEGER NOT NULL, `telegramSucceeded` INTEGER NOT NULL, `telegramFailed` INTEGER NOT NULL, `enableTelegramTransfers` INTEGER NOT NULL, `startedAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `finishedAt` INTEGER NOT NULL, `failure` TEXT NOT NULL, `accuracyMode` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requestedCount",
+            "columnName": "requestedCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "selectedWorkers",
+            "columnName": "selectedWorkers",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stage",
+            "columnName": "stage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageCompleted",
+            "columnName": "stageCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageTotal",
+            "columnName": "stageTotal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedWork",
+            "columnName": "completedWork",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalWork",
+            "columnName": "totalWork",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramTotal",
+            "columnName": "telegramTotal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramCompleted",
+            "columnName": "telegramCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramSucceeded",
+            "columnName": "telegramSucceeded",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telegramFailed",
+            "columnName": "telegramFailed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "enableTelegramTransfers",
+            "columnName": "enableTelegramTransfers",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAt",
+            "columnName": "startedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "finishedAt",
+            "columnName": "finishedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failure",
+            "columnName": "failure",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyMode",
+            "columnName": "accuracyMode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "source_fetch_history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sourceUrl` TEXT NOT NULL, `fetchedAt` INTEGER NOT NULL, `success` INTEGER NOT NULL, `rawProxyCount` INTEGER NOT NULL, `uniqueProxyCount` INTEGER NOT NULL, `duplicateRate` REAL NOT NULL, `durationMs` INTEGER NOT NULL, `contentSignature` TEXT NOT NULL, `endpointDiversity` INTEGER NOT NULL, `networkType` TEXT NOT NULL, `errorCode` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceUrl",
+            "columnName": "sourceUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fetchedAt",
+            "columnName": "fetchedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "success",
+            "columnName": "success",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rawProxyCount",
+            "columnName": "rawProxyCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uniqueProxyCount",
+            "columnName": "uniqueProxyCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duplicateRate",
+            "columnName": "duplicateRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "durationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentSignature",
+            "columnName": "contentSignature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endpointDiversity",
+            "columnName": "endpointDiversity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkType",
+            "columnName": "networkType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "errorCode",
+            "columnName": "errorCode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_source_fetch_history_sourceUrl_fetchedAt",
+            "unique": false,
+            "columnNames": [
+              "sourceUrl",
+              "fetchedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_fetch_history_sourceUrl_fetchedAt` ON `${TABLE_NAME}` (`sourceUrl`, `fetchedAt`)"
+          },
+          {
+            "name": "index_source_fetch_history_fetchedAt",
+            "unique": false,
+            "columnNames": [
+              "fetchedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_fetch_history_fetchedAt` ON `${TABLE_NAME}` (`fetchedAt`)"
+          },
+          {
+            "name": "index_source_fetch_history_contentSignature_fetchedAt",
+            "unique": false,
+            "columnNames": [
+              "contentSignature",
+              "fetchedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_fetch_history_contentSignature_fetchedAt` ON `${TABLE_NAME}` (`contentSignature`, `fetchedAt`)"
+          }
+        ]
+      },
+      {
+        "tableName": "private_proxy_nodes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `label` TEXT NOT NULL, `server` TEXT NOT NULL, `port` INTEGER NOT NULL, `secret` TEXT NOT NULL, `enabled` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `lastChecked` INTEGER NOT NULL, `verificationStatus` TEXT NOT NULL, `verificationConfidence` INTEGER NOT NULL, `latency` INTEGER NOT NULL, `p90Latency` INTEGER NOT NULL, `jitter` INTEGER NOT NULL, `stability` REAL NOT NULL, `transferScore` INTEGER NOT NULL, `networkFingerprint` TEXT NOT NULL, `networkType` TEXT NOT NULL, `lastError` TEXT NOT NULL, PRIMARY KEY(`url`))",
+        "fields": [
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "server",
+            "columnName": "server",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "port",
+            "columnName": "port",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secret",
+            "columnName": "secret",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "enabled",
+            "columnName": "enabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastChecked",
+            "columnName": "lastChecked",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationStatus",
+            "columnName": "verificationStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationConfidence",
+            "columnName": "verificationConfidence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latency",
+            "columnName": "latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "p90Latency",
+            "columnName": "p90Latency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jitter",
+            "columnName": "jitter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stability",
+            "columnName": "stability",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transferScore",
+            "columnName": "transferScore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkFingerprint",
+            "columnName": "networkFingerprint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkType",
+            "columnName": "networkType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastError",
+            "columnName": "lastError",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "url"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_private_proxy_nodes_enabled",
+            "unique": false,
+            "columnNames": [
+              "enabled"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_private_proxy_nodes_enabled` ON `${TABLE_NAME}` (`enabled`)"
+          },
+          {
+            "name": "index_private_proxy_nodes_lastChecked",
+            "unique": false,
+            "columnNames": [
+              "lastChecked"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_private_proxy_nodes_lastChecked` ON `${TABLE_NAME}` (`lastChecked`)"
+          }
+        ]
+      },
+      {
+        "tableName": "network_speed_baselines",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`networkFingerprint` TEXT NOT NULL, `networkType` TEXT NOT NULL, `isMetered` INTEGER NOT NULL, `downloadKbps` INTEGER NOT NULL, `uploadKbps` INTEGER NOT NULL, `downloadSampleBytes` INTEGER NOT NULL, `uploadSampleBytes` INTEGER NOT NULL, `measuredAt` INTEGER NOT NULL, PRIMARY KEY(`networkFingerprint`))",
+        "fields": [
+          {
+            "fieldPath": "networkFingerprint",
+            "columnName": "networkFingerprint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkType",
+            "columnName": "networkType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isMetered",
+            "columnName": "isMetered",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadKbps",
+            "columnName": "downloadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uploadKbps",
+            "columnName": "uploadKbps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadSampleBytes",
+            "columnName": "downloadSampleBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uploadSampleBytes",
+            "columnName": "uploadSampleBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measuredAt",
+            "columnName": "measuredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "networkFingerprint"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_network_speed_baselines_measuredAt",
+            "unique": false,
+            "columnNames": [
+              "measuredAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_network_speed_baselines_measuredAt` ON `${TABLE_NAME}` (`measuredAt`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'adeec8bba32f0c37cad6c4a5d4f75ff5')"
+    ]
+  }
+}

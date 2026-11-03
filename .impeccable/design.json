@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T15:40:16Z",
+  "title": "Design System: ProxyX Native Neon",
+  "extensions": {
+    "nativePlatform": {
+      "platform": "android",
+      "runtime": "Kotlin / Jetpack Compose / Material 3",
+      "units": { "layout": "dp", "typography": "sp", "letterSpacing": "sp" },
+      "tokenAuthority": "../DESIGN.md YAML frontmatter; exact explicit Kotlin values, no CSS conversion",
+      "previewPolicy": "Native-only adaptation of schemaVersion 2: components carry metadata, with Compose specifications in extensions.nativeComponents. HTML/CSS previews are deliberately omitted because no browser approximation is authoritative for Compose. No web preview or final device rendering is asserted.",
+      "sources": [
+        "app/src/main/java/com/example/ui/theme/Color.kt",
+        "app/src/main/java/com/example/ui/theme/Theme.kt",
+        "app/src/main/java/com/example/ui/theme/Type.kt",
+        "app/src/main/java/com/example/ui/NeonComponents.kt",
+        "app/src/main/java/com/example/ui/NeonPresentation.kt",
+        "app/src/main/java/com/example/ui/DashboardScreen.kt",
+        "app/src/main/java/com/example/ui/BenchmarkScreen.kt",
+        "app/src/main/java/com/example/ui/SettingsScreen.kt",
+        "app/src/main/java/com/example/ui/VaultScreen.kt",
+        "app/src/main/java/com/example/ui/WebProxyPanel.kt",
+        "app/src/main/java/com/example/MainActivity.kt"
+      ],
+      "themeSelection": "MainActivity maps saved dark/light/system to darkTheme. dynamicColor defaults to false and is not enabled at the call site. Optional LightColorScheme remains in source; it is not duplicated into the compact dark-world token set or renewed approval of rejected light proposals.",
+      "materialDefaults": "Unspecified color roles, component dimensions, ripple, focus, interaction layers and shapes remain library defaults; they were not reverse-engineered or replaced with guessed values.",
+      "fontResources": ["R.font.vazirmatn_regular (Normal)", "R.font.vazirmatn_bold (Bold)"],
+      "fontWeightResolution": "500 and 600 are requested TextStyle weights; no separate medium or semibold font resource is evidenced in Type.kt."
+    },
+    "evidence": {
+      "status": "DEBUG PREVIEW",
+      "reviewDisposition": "recapture",
+      "finalRenderedUiVerified": false,
+      "releaseReady": false,
+      "approvedConcept": ".impeccable/mocks/04-neon-four-screens.png",
+      "directionContract": "docs/NEON-SURFACE-BRIEF.md",
+      "verificationRecord": "docs/NEON-VERIFICATION.md",
+      "firstPassCaptures": [
+        "artifacts/neon-device/neon-first-home-compact-app.png",
+        "artifacts/neon-device/neon-first-current.png",
+        "artifacts/neon-device/neon-first-library.png",
+        "artifacts/neon-device/neon-first-settings.png",
+        "artifacts/neon-device/neon-first-settings-wide.png"
+      ],
+      "phoneReviewCaptures": [
+        "artifacts/phone-20261103/review-phone-home.png",
+        "artifacts/phone-20261103/review-phone-test.png",
+        "artifacts/phone-20261103/review-phone-library.png",
+        "artifacts/phone-20261103/review-phone-settings.png"
+      ],
+      "captureFreshness": "First-pass captures are historical. The owner identifies review-phone-*.png as physical-device RC3 captures, not RC5. This refresh inventoried those filenames without inspecting rasters; neither set establishes current-source rendering.",
+      "reportedVerification": "NEON-VERIFICATION.md is a historical compilation/test record, not current acceptance. RC5 compilation was reported in progress at the start of this refresh; its result was not checked. Component updates are source-backed only, not RC5 device or runtime acceptance.",
+      "blockedRecapture": "Prior documentation records system_server/SystemUI ANRs under host memory pressure and an unresolved ProxyX resize/focus-timeout ANR. These remain historical unresolved findings, neither attributed to nor cleared by RC5; they are not a claim that current physical-device capture is blocked.",
+      "pending": ["Current RC5 compact/wide/scaled-font native verification", "Main user workflows on a usable device or emulator", "Resize ANR attribution and resolution", "Authenticated Telegram transfer", "Physical-device performance", "Release signing"],
+      "documentationPass": "Read named source/context and inventoried RC3 filenames; wrote only DESIGN.md and .impeccable/design.json. No raster inspection, builds, device/UI automation or preview pixel gates."
+    },
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Signal Cyan" },
+      "on-primary": { "role": "primary", "displayName": "Cyan Ink" },
+      "primary-container": { "role": "primary", "displayName": "Deep Cyan Well" },
+      "on-primary-container": { "role": "primary", "displayName": "Cyan Well Text" },
+      "secondary": { "role": "secondary", "displayName": "Selection Violet" },
+      "on-secondary": { "role": "secondary", "displayName": "Violet Ink" },
+      "secondary-container": { "role": "secondary", "displayName": "Violet Well" },
+      "on-secondary-container": { "role": "secondary", "displayName": "Violet Well Text" },
+      "tertiary": { "role": "tertiary", "displayName": "Caution Amber" },
+      "background": { "role": "neutral", "displayName": "Night Field" },
+      "surface": { "role": "neutral", "displayName": "Panel Ink" },
+      "surface-variant": { "role": "neutral", "displayName": "Raised Panel Ink" },
+      "on-background": { "role": "neutral", "displayName": "Ice Background Text" },
+      "on-surface": { "role": "neutral", "displayName": "Ice Surface Text" },
+      "on-surface-variant": { "role": "neutral", "displayName": "Quiet Text" },
+      "outline": { "role": "neutral", "displayName": "Control Outline" },
+      "outline-variant": { "role": "neutral", "displayName": "Measured Outline" },
+      "error": { "role": "error", "displayName": "Failure Coral" },
+      "error-container": { "role": "error", "displayName": "Failure Well" }
+    },
+    "tonalRampPolicy": "No synthetic eight-step ramps: Kotlin declares fixed role colors, not normative hue/chroma ramps. Invented OKLCH strips would not describe the native implementation. Role primitives live only in DESIGN.md.",
+    "typographyMeta": {
+      "headlineLarge": { "displayName": "Headline Large", "purpose": "Measured or missing protocol-latency numeral." },
+      "headlineSmall": { "displayName": "Headline Small", "purpose": "LTR numeric face when the gauge is compact and system fontScale > 1.15; source-defined reflow, not device-accepted legibility." },
+      "titleLarge": { "displayName": "Title Large", "purpose": "ProxyX app title, explicitly overridden to Bold at the shell call site." },
+      "titleMedium": { "displayName": "Title Medium", "purpose": "Section and Telegram-action headings." },
+      "titleSmall": { "displayName": "Title Small", "purpose": "Endpoint and settings titles; some call sites override to Bold." },
+      "bodyLarge": { "displayName": "Body Large", "purpose": "Settings option-dialog text. Fields retain unspecified native defaults; no field typography override is asserted." },
+      "bodyMedium": { "displayName": "Body Medium", "purpose": "Endpoint row text with explicit LTR direction." },
+      "bodySmall": { "displayName": "Body Small", "purpose": "Secondary status, history and network evidence." },
+      "labelMedium": { "displayName": "Label Medium", "purpose": "Navigation labels, stages, Home row metric values and small context." },
+      "labelSmall": { "displayName": "Label Small", "purpose": "Explicit MTProto/TCP captions on Home row and selected-endpoint metrics; not permission for ad hoc tiny type." }
+    },
+    "elevation": [
+      { "name": "proxy-row-rest", "value": "0dp", "purpose": "Explicit CardDefaults.cardElevation(defaultElevation = 0.dp) in Home rows." },
+      { "name": "settings-group-rest", "value": "0dp", "purpose": "Explicit zero-elevation settings groups." },
+      { "name": "bottom-navigation-tonal", "value": "0dp", "purpose": "Explicit NavigationBar tonalElevation; not a global Material elevation override." }
+    ],
+    "motion": [
+      { "name": "benchmark-progress", "value": "tween(180)", "purpose": "180ms event-driven animateFloatAsState of runtime overallFraction, coerced to 0..1; LinearProgressIndicator reads animatedProgress.value in its progress callback. Overall text formats the runtime fraction, not animated state; no smoothness acceptance." },
+      { "name": "favorite-scale", "value": "spring(dampingRatio = 0.62f, stiffness = 520f)", "purpose": "Selection-triggered scale target 1.08f when favorite, otherwise 1f. Reduced-motion/device rendering not verified." }
+    ],
+    "breakpoints": [
+      { "name": "navigation-rail-min-width", "value": "600dp" },
+      { "name": "compact-ring-and-gauge-content-height-below", "value": "560dp" },
+      { "name": "home-collapse-action-content-height-below", "value": "360dp" }
+    ],
+    "layout": {
+      "shellMaxWidth": "1000dp",
+      "breakpointSpace": "Navigation threshold uses shell maxWidth; height thresholds use screen content maxHeight after Scaffold insets, not physical display pixels.",
+      "homeCollapseCondition": "filtersVisible || heightDp < 360f",
+      "pageState": "rememberSaveableStateHolder plus saveable main/library selection",
+      "direction": "LocalLayoutDirection: Persian RTL, English LTR; endpointStyle copies TextDirection.Ltr",
+      "compactGaugeLargeFont": "useSideGaugeLabels(compact, fontScale) = compact && fontScale > 1.15f: 96dp numeric face, 16dp side-caption gap, caption widthIn(max = 180.dp). Other compact gauges remain 140dp; regular remains 176dp. Source-defined, not verified on RC5 hardware.",
+      "touchTargetFloor": "48dp product requirement, not blanket verified coverage"
+    },
+    "nativeComponents": {
+      "button-benchmark": {
+        "source": "app/src/main/java/com/example/ui/BenchmarkScreen.kt",
+        "compose": "Button(..., shape = RoundedCornerShape(8.dp), modifier = Modifier.height(56.dp))",
+        "states": "Run start or pause/resume; cancel overrides containerColor = colorScheme.error without an explicit content-color override. Disabled start overrides primary alpha to 0.3f."
+      },
+      "button-test-home": {
+        "source": "app/src/main/java/com/example/ui/DashboardScreen.kt: ActiveProxyHeroCard",
+        "compose": "OutlinedButton(..., modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp).heightIn(min = 48.dp))",
+        "shape": "Material default, not an explicit 8dp override",
+        "states": "No selected proxy disables it; testing changes command/icon to cancellation. Telegram opening is independent."
+      },
+      "proxy-row": {
+        "source": "app/src/main/java/com/example/ui/DashboardScreen.kt: ProxyItemRow",
+        "border": "BorderStroke(1.dp, if (isSelected) colorScheme.secondary else colorScheme.outlineVariant)",
+        "selectedFill": "colorScheme.secondaryContainer.copy(alpha = 0.35f)",
+        "content": "LTR endpoint, explicit evidence status and expandable native tools; no success inferred from selection",
+        "metric": "Only nonhistorical reachable rows show the compact metric: MTProto with eligible currentProtocolLatency unless TCP-latency sorting is selected; otherwise TCP with proxy.latency. labelSmall caption, labelMedium LTR value. Never silently substitute TCP under MTProto.",
+        "selectedEndpointMetric": "ActiveProxyHeroCard's noncollapsed layout shows MTProto plus eligible currentProtocolLatency using labelSmall/labelLarge. Its collapsed layout uses a Telegram button in that position."
+      },
+      "field-count": {
+        "source": "app/src/main/java/com/example/ui/BenchmarkScreen.kt",
+        "compose": "OutlinedTextField(..., keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number), singleLine = true, modifier = Modifier.weight(1f))",
+        "states": "Native focus/error/disabled presentation; digits normalized, bounded length; conflicting collection/testing disables input.",
+        "geometry": "No custom field padding, stroke or focus glow extracted."
+      },
+      "labeled-switches": {
+        "sources": ["app/src/main/java/com/example/ui/BenchmarkScreen.kt", "app/src/main/java/com/example/ui/VaultScreen.kt", "app/src/main/java/com/example/ui/WebProxyPanel.kt"],
+        "semantics": "Native Material Switch checked/enabled semantics plus localized Modifier.semantics contentDescription directly on the control.",
+        "labels": "Benchmark finalist transfer uses copy.telegramFinalistTransfer; private monitoring uses copy.monitorPrivate; private-node enable includes node.label; WEB transfer uses localized Real Telegram file transfer.",
+        "webAvailability": "checked = transfer && signedIn; enabled = signedIn && !state.running",
+        "verification": "Source-backed names only, not TalkBack or full accessibility acceptance."
+      },
+      "benchmark-progress": {
+        "sources": ["app/src/main/java/com/example/ui/NeonPresentation.kt: benchmarkProgressLabel", "app/src/main/java/com/example/ui/BenchmarkScreen.kt"],
+        "label": "Localized Overall prefix; percentage wrapped in LTR isolation (U+2066/U+2069); formats runtime overallFraction, not per-stage pass rate or transfer speed.",
+        "formatter": "Finite fractions clamp to 0..1; nonfinite becomes 0. Exact endpoints: 0% and 100%. Positive below 0.1%: <0.1%. Below 1%: one decimal with Locale.US. Remaining incomplete progress: integer percent capped at 99%.",
+        "indicator": "LinearProgressIndicator(progress = { animatedProgress.value }): 8dp high, 4dp clipped corners, primary fill, primary alpha 0.20 track; tween(180).",
+        "verification": "Draw callback and formatting are source-backed; no device smoothness or successful-completion claim."
+      },
+      "chip-library-selected": {
+        "source": "app/src/main/java/com/example/ui/VaultScreen.kt",
+        "compose": "FilterChip(..., colors = FilterChipDefaults.filterChipColors(selectedContainerColor = colorScheme.secondaryContainer, selectedLabelColor = colorScheme.onSecondaryContainer))",
+        "layout": "Horizontally scrollable category row, 16dp horizontal padding, 8dp gaps; native shape/default states"
+      },
+      "settings-row": {
+        "source": "app/src/main/java/com/example/ui/SettingsScreen.kt: SettingsItem / ToggleSettingsItem",
+        "icons": "24dp native Material icons; 16dp icon-to-text gap; arrow uses native auto-mirroring",
+        "type": "titleSmall with Bold override; bodySmall subtitle",
+        "switchColors": "checkedTrackColor = secondaryContainer; checkedThumbColor = secondary; checkedBorderColor = secondary",
+        "container": "SettingsCard: surface, 8dp corners, 1dp outlineVariant, 0dp elevation. Rows own their padding."
+      },
+      "navigation-selected": {
+        "source": "app/src/main/java/com/example/MainActivity.kt",
+        "compose": "NavigationBarItem / NavigationRailItem",
+        "roles": "selectedIconColor and selectedTextColor = secondary; indicatorColor = secondaryContainer; bottom inactive roles = onSurfaceVariant",
+        "behavior": "Four destinations, bottom below rail threshold; saved page state; native semantics and interactions"
+      },
+      "telegram-action": {
+        "source": "app/src/main/java/com/example/ui/NeonComponents.kt: NeonTelegramAction",
+        "shape": "CircleShape",
+        "diameters": { "regular": "128dp", "compact": "96dp" },
+        "iconSizes": { "regular": "46dp", "compact": "36dp" },
+        "brush": "remember(primary, secondary, enabled): sweepGradient(primary, primary, secondary, primary); disabled uses outline only",
+        "drawing": "radius = minDimension / 2 - 9dp; surface fill; 18dp ring at alpha 0.12; 6dp main ring; 1dp primary outer line at radius + 7dp and alpha 0.25",
+        "semantics": "Role.Button, localized contentDescription, clickable only with selected endpoint; opens Telegram, not a VPN connection"
+      },
+      "latency-gauge": {
+        "source": "app/src/main/java/com/example/ui/NeonComponents.kt: NeonLatencyGauge",
+        "diameters": { "regular": "176dp", "compact": "140dp", "compactLargeFont": "96dp" },
+        "textWidths": { "regular": "130dp", "compact": "110dp", "largeFontSideMaximum": "180dp" },
+        "drawing": "12dp inset; 150-degree start, 240-degree sweep; 7dp StrokeCap.Round arc; 33 ticks at 7.5-degree steps, outline alpha 0.7. Tick outer radius = arc radius + 11dp when compact, arc radius - 10dp otherwise; major ticks extend inward 7dp, others 3dp. Missing latency arc alpha 0.35.",
+        "largeFontReflow": "compact && LocalDensity.current.fontScale > 1.15f: only the LTR headlineSmall numeral or missing dash remains inside a 96dp face; captions move beside it with a 16dp gap, 4dp vertical spacing and widthIn(max = 180.dp). At/below threshold, internal captions and headlineLarge numeral remain.",
+        "valuePolicy": "currentProtocolLatency requires nonblank matching network fingerprint, lastChecked > 0, isTelegramVerified and protocolLatency > 0. Benchmark filters in-run candidates by runtime start timestamp. Missing value is explicit, not zero/success.",
+        "verification": "RC5 source geometry and reflow only; RC3 phone captures do not prove collision-free or accessible RC5 rendering."
+      },
+      "stage-strip": {
+        "source": "app/src/main/java/com/example/ui/NeonComponents.kt: NeonStageStrip; NeonPresentation.kt: stageAppearances",
+        "geometry": "32dp CircleShape markers, equal weighted columns, 4dp inter-column gaps, 6dp marker-to-label gap",
+        "states": "COMPLETE primary/check; ACTIVE secondary/more; PAUSED secondary/pause; STOPPED error/close; PENDING and SKIPPED onSurfaceVariant/number. Every state has text.",
+        "truth": "Three stages or four when transfersRequested; completed runs with zero stage attempts are SKIPPED, not complete; transfer requires its own result."
+      }
+    },
+    "notCanonized": [
+      "First-pass missing Home ring, endpoint direction, malformed sort segment geometry, stale-result ambiguity and wide light system-navigation strip; final source corrections lack rendered confirmation.",
+      "Ad hoc tiny detail text and FontFamily.Monospace metric overrides are not shared type tokens or accepted legibility.",
+      "UiUtils flag emoji usage in Home rows is an observed glyph-icon defect, not a house icon style.",
+      "Hard-coded local status colors (including Home readiness/source/private-node green and quarantine amber) are not a new global semantic palette.",
+      "Compact gauge caption overlap is not an accepted layout rule; outward ticks and RC5 large-font reflow remain source-only until current native verification.",
+      "No full touch-target, scaled-font, reduced-motion or workflow acceptance is claimed.",
+      "Earlier ProxyX resize/focus-timeout ANR, historical system ANRs, authenticated transfer and measured device smoothness remain outside accepted claims. RC5 compilation in progress and RC3 phone captures do not establish RC5 acceptance."
+    ]
+  },
+  "components": [
+    { "name": "Benchmark Command", "kind": "button", "refersTo": "button-benchmark", "description": "Native 56dp benchmark action with runtime-aware availability; Compose specification in extensions.nativeComponents." },
+    { "name": "Home Test Command", "kind": "button", "description": "Native outlined test/cancel command, minimum 48dp; no invented shape or web hover state." },
+    { "name": "Proxy Row", "kind": "card", "refersTo": "proxy-row", "description": "Outlined selectable endpoint with explicit MTProto/TCP metric captions, status and expandable native tools." },
+    { "name": "Benchmark Count", "kind": "input", "description": "Single-line native numeric OutlinedTextField with normalized input; unspecified styling stays native." },
+    { "name": "Library Category", "kind": "chip", "refersTo": "chip-library-selected", "description": "Native FilterChip with violet-container selected state." },
+    { "name": "Settings Row", "kind": "custom", "refersTo": "settings-row", "description": "Native icon, title/subtitle and command or violet checked switch." },
+    { "name": "Adaptive Navigation", "kind": "nav", "refersTo": "navigation-selected", "description": "Bottom bar or rail with explicit secondary selection roles." },
+    { "name": "Telegram Action", "kind": "custom", "refersTo": "telegram-action", "description": "Bounded Canvas ring around a semantic native button; not a connection claim." },
+    { "name": "Protocol Latency Gauge", "kind": "custom", "description": "Bounded Canvas arc with truthful current-network measurement or missing state; compact large-font layout moves captions beside a numeric face. Source-backed, not RC5 device-accepted." },
+    { "name": "Benchmark Stage Strip", "kind": "custom", "description": "Native labeled stages distinguish completed, active, paused, stopped, pending and not run." }
+  ],
+  "narrative": {
+    "northStar": "The Neon Proxy Console",
+    "overview": "A near-black native Android utility with luminous cyan actions and violet selection, grounded in the owner's approved Persian four-screen concept. Vazirmatn, readable evidence and familiar Material 3 interactions carry the identity. The previous light design proposals were rejected; the implemented optional light theme is a user preference, not a competing approved concept.\n\nThe visual world supports choosing an endpoint, inspecting network-specific evidence, testing independently and opening Telegram. Light comes from bounded native drawing and tonal surfaces, not a web runtime or continuous effects. Keep the six-block surface contract and its quality bar in `docs/NEON-SURFACE-BRIEF.md`; the four-screen composition is not a universal screen template.",
+    "keyCharacteristics": [
+      "Persian RTL and English LTR with explicitly LTR endpoint text.",
+      "Cyan action/evidence, violet selection and restrained amber uncertainty.",
+      "Outlined native surfaces, compact controls and bounded Canvas rings.",
+      "Scrollable work areas with adaptive native navigation.",
+      "Source-recorded design; final rendering and release acceptance remain pending."
+    ],
+    "rules": [
+      { "name": "The Evidence Before Glow Rule", "body": "Color accompanies explicit status text or icons; only fresh, current-network protocol evidence earns a measured latency. Unknown, historical and untested data never borrows a success treatment.", "section": "colors" },
+      { "name": "The Unbroken Script Rule", "body": "Keep Vazirmatn and zero letter spacing in shared typography; isolate endpoint direction without reversing Persian layout or introducing a decorative display face.", "section": "typography" },
+      { "name": "The Bounded Light Rule", "body": "Keep luminous emphasis local to native ring/gauge drawing and state; do not add continuous blur, 3D or a web animation runtime to reproduce the approved concept.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use native Material color and typography roles from the recorded Kotlin theme, keeping dp and sp distinct.",
+      "Do retain Persian RTL, English LTR and explicit LTR endpoint text without adding letter spacing.",
+      "Do keep Telegram opening separate from testing and label historical, missing and other-network evidence explicitly.",
+      "Do preserve scrolling work areas, adaptive navigation and at least 48dp action targets while checking scaled-font layouts on a usable native device.",
+      "Do treat the approved concept as visual direction and first-pass/RC3 captures as historical evidence; require current native verification before RC5 acceptance."
+    ],
+    "donts": [
+      "Don't restore the rejected light proposals as the approved identity or remove the retained optional light/system preference.",
+      "Don't translate native dp/sp or Material defaults into invented CSS pixels, web hover tokens or fabricated component previews.",
+      "Don't add continuous blur, 3D, background shaders or a web runtime for decorative neon effects.",
+      "Don't promote ad hoc tiny type, monospace metric overrides, emoji flag icons or inconsistent hard-coded status colors into shared design tokens.",
+      "Don't canonize first-pass ring absence, endpoint direction problems, segmented-corner defects, stale-result ambiguity or the wide light system strip; source corrections still require rendered confirmation.",
+      "Don't call this release-ready, resolve the resize ANR by assumption, or claim authenticated transfer, complete workflow coverage or measured device smoothness from compilation and tests."
+    ]
+  }
+}
